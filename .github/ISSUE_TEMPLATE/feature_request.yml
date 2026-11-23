@@ -1,0 +1,46 @@
+name: Feature request
+description: Suggest a capability or a change in behaviour
+labels: ['enhancement', 'needs triage']
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: |
+        What are you trying to do that is awkward or impossible today? Describe the
+        situation rather than the solution, so there is room to find a better one.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you have in mind
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind of request
+      options:
+        - A new export
+        - A change to an existing export
+        - Types or typings
+        - Packaging or tooling
+        - Something else
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Concrete examples
+      description: Show the code you would like to be able to write, and what it should do.
+      render: ts
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What you have tried or considered
+      description: Including whether an existing export nearly does it.
